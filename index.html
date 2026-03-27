@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wagayway Equality</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="icon" type="image/x-icon" href="assets/logos/WElogo.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+
+/* Sparkle Animation */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Floating Animation on Scroll */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+                        <a class="navbar-brand" href="index.html"><img src="assets/logos/WE.png" alt="Logo"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="whoweare">WHO WE ARE</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHAT WE DO
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <!--                       <li>-->
+    <!--    <a class="dropdown-item" href="/public" target="_blank" rel="noopener noreferrer">-->
+    <!--        <i class="fas fa-book icon-color"></i> Book Now-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="/public/events_calendar" target="_blank" rel="noopener noreferrer">-->
+    <!--        <i class="fas fa-calendar-alt icon-color"></i> Calendar-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="whatwedo#sogie">-->
+    <!--        <i class="fas fa-heart icon-color"></i> SOGIE-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="whatwedo#health">-->
+    <!--        <i class="fas fa-hand-holding-medical icon-color"></i> Health-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="whatwedo#rights">-->
+    <!--        <i class="fas fa-scale-balanced icon-color"></i> Rights-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="whatwedo#socio-economic">-->
+    <!--        <i class="fas fa-coins icon-color"></i> Socio Economic-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="whatwedo#training">-->
+    <!--        <i class="fas fa-graduation-cap icon-color"></i> Trainings and <br> Development-->
+    <!--    </a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--    <a class="dropdown-item" href="whatwedo#support">-->
+    <!--        <i class="fas fa-users icon-color"></i> Support Groups-->
+    <!--    </a>-->
+    <!--</li>-->
+                                <li><a class="dropdown-item" href="whatwedo#sogie">SOGIE</a></li>
+                            <li><a class="dropdown-item" href="whatwedo#health">Health</a></li>
+                            <li><a class="dropdown-item" href="whatwedo#rights">Rights</a></li>
+                            <li><a class="dropdown-item" href="whatwedo#socio-economic">Socio Economic</a></li>
+                            <li><a class="dropdown-item" href="whatwedo#training">Trainings and <br> Development</a></li>
+                            <li><a class="dropdown-item" href="whatwedo#support">Support Groups</a></li>
+                            <!--<li><a class="dropdown-item" href="#" id="activitiesLink">Activities</a></li>-->
+                        </ul>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stories">OUR STORIES</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="joinus">JOIN US</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="/public/events_calendar" target="_blank">CALENDAR</a></li>-->
+                    <li class="nav-item">
+                        <a class="btn donate-btn" href="donate">DONATE NOW</a>
+                    </li>
+                    <!--<li class="nav-item dropdown">-->
+                    <!--    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+                    <!--        data-bs-toggle="dropdown" aria-expanded="false">-->
+                    <!--        <i class="fas fa-user-alt"></i>-->
+                    <!--    </a>-->
+                    <!--    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+                    <!--        <li><a class="dropdown-item" href="public">Login/Register</a></li>-->
+                    <!--    </ul>-->
+
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Carousel -->
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/eq.jpg" class="d-block w-100"/>
+        <!-- <div class="carousel-caption d-none d-md-block">
+                    <h5>Empowering Communities</h5>
+                    <p>Together, we're building a more inclusive and equitable society for all.</p>
+                </div> -->
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/1.jpg" class="d-block w-100"/>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/2.jpg" class="d-block w-100"/>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/4.png" class="d-block w-100"/>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/3.png" class="d-block w-100"/>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/joinus.jpg" class="d-block w-100"/>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Who We Are Section -->
+  <div class="container my-5">
+    <section class="who-we-are">
+      <div class="row g-0">
+        <div class="col-md-6 who-we-are-image">
+          <img src="assets/logos/WElogo.png" alt="Wagayway Equality"/>
+        </div>
+        <div class="col-md-6 who-we-are-content">
+          <h2><span>W</span>ho <span>W</span>e <span>A</span>re</h2>
+          <p>
+            Wagayway Equality is a non-government, non-profit, community-based
+            organization based in Batangas City that actively advocates for
+            sexuality, mental health, health, rights, socio-economic
+            development and the inclusive integration of the LGBTQIA+
+            community, the youth (YKP), and other targeted key-affected
+            populations in our society since 2007. Going beyond such
+            advocacies, we envision fostering a Community of Volunteers who
+            passionately contribute their time and expertise to drive the
+            organization's initiatives forward.
+          </p>
+          <a href="whoweare.php" class="btn btn-see-more">See More</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Programs Section -->
+  <section class="section">
+    <h2 class="text-center mb-4"><span>O</span>ur <span>F</span>lagship <span>P</span>rograms</h2>
+    <div class="card-container" id="programContainer">
+      <!-- Program cards will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <div class="container">
+    <h2><span>C</span>ontact <span>U</span>s</h2>
+    <div class="contact-content">
+      <div class="location-card">
+        <div class="map-placeholder">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15499.932146255089!2d121.05112450781247!3d13.7798961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd0f470a0a1c27%3A0xb27fa45706393f46!2sWagayway%20Equality%20Inc.!5e0!3m2!1sen!2sph!4v1726819763263!5m2!1sen!2sph" width="600" height="250" style="border-radius: 10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p><i class="fas fa-building"></i> ESPASYO Community Center</p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> 3F Golden Core Ville
+          Bldg.,Nueva Villa Subd., Brgy. Alangilan, Batangas City, Batangas,
+          Philippines 4200
+        </p>
+        <p><i class="fas fa-phone"></i> (0967) 138 2063</p>
+      </div>
+      <div class="location-card">
+        <div class="map-placeholder">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.3948529392487!2d121.05378587128627!3d13.755045957103976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd0583bb8ccc17%3A0x5c22f2f014b713c6!2sEquality%20Desk%20by%20Wagayway%20Equality!5e0!3m2!1sen!2sph!4v1726819893713!5m2!1sen!2sph" width="600" height="250" style="border-radius: 10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p><i class="fas fa-building"></i> Equality Desk Office</p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> 2/F ENRO Bldg., P. Burgos St.,
+          Batangas City, Philippines, Batangas City, Philippines
+        </p>
+        <p><i class="fas fa-phone"></i> (0976) 342 7850</p>
+      </div>
+      <div class="contact-form">
+    <p>We'd love to hear from you! How can we help?</p>
+    <form id="contactForm" onsubmit="return sendEmail(event);">
+        <select name="subject" id="subject" required>
+            <optgroup label="Subject">
+                <option value="Feedback">Feedback</option>
+                <option value="Inquiry">Inquiry</option>
+            </optgroup>
+        </select>
+        <input type="text" id="name" name="name" placeholder="Name" required/>
+        <input type="email" id="email" name="email" placeholder="Email" required/>
+        <input type="tel" id="phone" name="phone" placeholder="Phone"/>
+        <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+        <button class="btn-see-more" type="submit">Submit</button>
+    </form>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Partners Carousel -->
+  <div class="container partner">
+    <h2><span>O</span>ur <span>P</span>artners</h2>
+    <div class="partner-carousel">
+      <div class="carousel-container">
+        <div class="logo-card"><a href="https://web.facebook.com/TLFShare">
+            <img src="assets/partners/tlf.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/ChampionCCPH/">
+            <img src="assets/partners/CHAMPION Community Center.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://gin-ssogie.org/free-to-be-me/">
+            <img src="assets/partners/freetobeme.jpg"/></a>
+        </div>
+        <div class="logo-card">
+          <img src="assets/partners/humanis.png"/>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/achieve.philippines.inc/">
+            <img src="assets/partners/IMG_4888.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://www.unaids.org/en">
+            <img src="assets/partners/IMG_4889.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://loveyourself.ph/"><img src="assets/partners/LY.png"/></div></a>
+        <div class="logo-card">
+          <img src="assets/partners/PROTECTS UPSCALE.png"/>
+        </div>
+        <div class="logo-card"><a href="https://pilipinasshellfoundation.org/"><img src="assets/partners/SHELL.png"/></a></div>
+        <div class="logo-card"><a href="https://wpfund.org/">
+            <img src="assets/partners/wellspring_philanthropic_fund-logo.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/TLFShare">
+            <img src="assets/partners/tlf.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/ChampionCCPH/">
+            <img src="assets/partners/CHAMPION Community Center.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://gin-ssogie.org/free-to-be-me/">
+            <img src="assets/partners/freetobeme.jpg"/></a>
+        </div>
+        <div class="logo-card">
+          <img src="assets/partners/humanis.png"/>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/achieve.philippines.inc/">
+            <img src="assets/partners/IMG_4888.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://www.unaids.org/en">
+            <img src="assets/partners/IMG_4889.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://loveyourself.ph/"><img src="assets/partners/LY.png"/></div></a>
+        <div class="logo-card">
+          <img src="assets/partners/PROTECTS UPSCALE.png"/>
+        </div>
+        <div class="logo-card"><a href="https://pilipinasshellfoundation.org/"><img src="assets/partners/SHELL.png"/></a></div>
+        <div class="logo-card"><a href="https://wpfund.org/">
+            <img src="assets/partners/wellspring_philanthropic_fund-logo.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/TLFShare">
+            <img src="assets/partners/tlf.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/ChampionCCPH/">
+            <img src="assets/partners/CHAMPION Community Center.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://gin-ssogie.org/free-to-be-me/">
+            <img src="assets/partners/freetobeme.jpg"/></a>
+        </div>
+        <div class="logo-card">
+          <img src="assets/partners/humanis.png"/>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/achieve.philippines.inc/">
+            <img src="assets/partners/IMG_4888.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://www.unaids.org/en">
+            <img src="assets/partners/IMG_4889.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://loveyourself.ph/"><img src="assets/partners/LY.png"/></div></a>
+        <div class="logo-card">
+          <img src="assets/partners/PROTECTS UPSCALE.png"/>
+        </div>
+        <div class="logo-card"><a href="https://pilipinasshellfoundation.org/"><img src="assets/partners/SHELL.png"/></a></div>
+        <div class="logo-card"><a href="https://wpfund.org/">
+            <img src="assets/partners/wellspring_philanthropic_fund-logo.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/TLFShare">
+            <img src="assets/partners/tlf.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/ChampionCCPH/">
+            <img src="assets/partners/CHAMPION Community Center.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://gin-ssogie.org/free-to-be-me/">
+            <img src="assets/partners/freetobeme.jpg"/></a>
+        </div>
+        <div class="logo-card">
+          <img src="assets/partners/humanis.png"/>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/achieve.philippines.inc/">
+            <img src="assets/partners/IMG_4888.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://www.unaids.org/en">
+            <img src="assets/partners/IMG_4889.PNG"/></a>
+        </div>
+        <div class="logo-card"><a href="https://loveyourself.ph/"><img src="assets/partners/LY.png"/></div></a>
+        <div class="logo-card">
+          <img src="assets/partners/PROTECTS UPSCALE.png"/>
+        </div>
+        <div class="logo-card"><a href="https://pilipinasshellfoundation.org/"><img src="assets/partners/SHELL.png"/></a></div>
+        <div class="logo-card"><a href="https://wpfund.org/">
+            <img src="assets/partners/wellspring_philanthropic_fund-logo.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/TLFShare">
+            <img src="assets/partners/tlf.png"/></a>
+        </div>
+        <div class="logo-card"><a href="https://web.facebook.com/ChampionCCPH/">
+            <img src="assets/partners/CHAMPION Community Center.png"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>WAGAYWAY EQUALITY</h3>
+        <h4>Community of Volunteers</h4>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="mailto:wagaywayequalityofficial@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.facebook.com/wagaywayequality" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/wagaywayequality/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@wagaywayequality" aria-label="Tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://x.com/WagaywayBTG" aria-label="Twitter" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/@wagaywayequalityinc." aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <div class="copyright">
+    <p>Copyright © 2024 Wagayway Equality. All Rights Reserved.</p>
+  </div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Carousel functionality
+      var myCarousel = document.querySelector("#heroCarousel");
+      var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000, // 5 seconds
+        wrap: true,
+      });
+
+      // Program cards creation
+      function createProgramCard(title, description, imageUrl) {
+        return `
+            <div class="col">
+                <div class="card h-100">
+                    <img src="${imageUrl}" class="card-img-top" alt="${title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                        <p class="card-text">${description}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+      }
+
+      const programs = [
+        {
+          title: "Empower Queer",
+          description: "A strategic program aimed at enhancing the socio-economic well-being of LGBTQIA+ individuals",
+          imageUrl: "assets/logos/4.png",
+        },
+        {
+          title: "Espasyo",
+          description: "Espasyo is committed to creating a safe, secure, and inclusive space for individuals and provide free HIV services.",
+          imageUrl: "assets/logos/2.png",
+        },
+        {
+          title: "Volunteer's Academy",
+          description: "A platform dedicated to empowering volunteers and fostering inclusivity and community engagement",
+          imageUrl: "assets/logos/3.png",
+        },
+        {
+          title: "Equality Desk",
+          description: "A streamlined, one-stopdesk for key populations and LGBTQIA+ community.",
+          imageUrl: "assets/logos/5.png",
+        },
+        {
+          title: "WE Transpire",
+          description: "A leading transgender advocate dedicated to empowering and uplifting all transgender and gender-diverse individuals.",
+          imageUrl: "assets/logos/6.png",
+        },
+        {
+          title: "YOUnite",
+          description: "A flagship youth-focused project of Wagayway Equality. The project aims to mobilize diverse youth to champion initiatives on gender, sexual health, and human rights. ",
+          imageUrl: "assets/logos/7.png",
+        },
+        {
+          title: "MPEC",
+          description: "Virtual leaders and volunteers who focus in branding, publicity, and engagement using multimedia and traditional media for advocacy of Wagayway Equality mission and vision.",
+          imageUrl: "assets/logos/8.png",
+        },
+        {
+          title: "LBQTindig",
+          description: "A LGBT-led initiative enhancing visibility, creating safe spaces, and empowering LGQT individuals to lead and participate in programs addressing their specific needs and challenges,",
+          imageUrl: "assets/logos/lbgt.png",
+        },
+      ];
+
+      const programContainer = document.getElementById("programContainer");
+      programs.forEach((program) => {
+        programContainer.innerHTML += createProgramCard(
+          program.title,
+          program.description,
+          program.imageUrl
+        );
+      });
+    });
+
+    // Partner carousel animation
+    const carousel = document.querySelector(".carousel-container");
+    const carouselWidth = carousel.scrollWidth / 2; // Half because we duplicated the items
+    let currentPosition = 0;
+    let isHovered = false;
+
+    function moveCarousel() {
+      if (!isHovered) {
+        currentPosition -= 1; // Adjust speed by changing this value
+        if (currentPosition <= -carouselWidth) {
+          currentPosition = 0;
+        }
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+      }
+      requestAnimationFrame(moveCarousel);
+    }
+
+    carousel.addEventListener("mouseenter", () => {
+      isHovered = true;
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+      isHovered = false;
+    });
+
+    // Make logo cards clickable
+    document.querySelectorAll(".logo-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        // alert("Partner logo clicked! Add your link action here.");
+      });
+    });
+
+    // Start the carousel
+    moveCarousel();
+    document.addEventListener("DOMContentLoaded", function() {
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll(".cardvmg");
+      cards.forEach((card) => {
+        card.addEventListener("click", function() {
+          this.style.backgroundColor =
+            this.style.backgroundColor === "rgb(236, 240, 241)" ?
+            "#f9f9f9" :
+            "#ecf0f1";
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    });
+  </script>
+ <script>
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(document.getElementById('contactForm'));
+
+        fetch('send_email.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Email sent successfully!');
+                document.getElementById('contactForm').reset(); // Reset the form
+            } else {
+                alert('Error sending email: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while sending the email.');
+        });
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Floating animation on scroll
+  const observerOptions = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add delay based on card index for sequential animation
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+        }, index * 200); // 200ms delay between each card
+      }
+    });
+  }, observerOptions);
+
+  // Observe all cards
+  document.querySelectorAll('.card').forEach(card => {
+    observer.observe(card);
+  });
+
+  // Sparkle animation for first card
+  function createSparkle() {
+    const firstCard = document.querySelector('.card:first-of-type');
+    if (!firstCard) return;
+
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+
+    // Random position around the border
+    const side = Math.floor(Math.random() * 4); // 0: top, 1: right, 2: bottom, 3: left
+    const position = Math.random() * 100;
+
+    switch(side) {
+      case 0: // top
+        sparkle.style.top = '0';
+        sparkle.style.left = `${position}%`;
+        break;
+      case 1: // right
+        sparkle.style.right = '0';
+        sparkle.style.top = `${position}%`;
+        break;
+      case 2: // bottom
+        sparkle.style.bottom = '0';
+        sparkle.style.left = `${position}%`;
+        break;
+      case 3: // left
+        sparkle.style.left = '0';
+        sparkle.style.top = `${position}%`;
+        break;
+    }
+
+    firstCard.appendChild(sparkle);
+
+    sparkle.style.animation = 'sparkleAnimation 1s ease-in-out forwards';
+
+    // Remove sparkle after animation
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1000);
+  }
+
+  // Create sparkles every 5 seconds
+  setInterval(createSparkle, 5000);
+
+  // Create initial sparkles
+  for (let i = 0; i < 3; i++) {
+    setTimeout(createSparkle, i * 200);
+  }
+});
+</script>
+
+</body>
+</html>
