@@ -1,0 +1,17 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/whoweare", "destination": "/whoweare.html" },
+    { "source": "/whoweare.php", "destination": "/whoweare.html" },
+    { "source": "/whatwedo", "destination": "/whatwedo.html" },
+    { "source": "/whatwedo.php", "destination": "/whatwedo.html" },
+    { "source": "/stories", "destination": "/ourstories.html" },
+    { "source": "/ourstories", "destination": "/ourstories.html" },
+    { "source": "/ourstories.php", "destination": "/ourstories.html" },
+    { "source": "/joinus", "destination": "/joinus.html" },
+    { "source": "/joinus.php", "destination": "/joinus.html" },
+    { "source": "/donate", "destination": "/donate.html" },
+    { "source": "/donate.php", "destination": "/donate.html" }
+  ]
+}

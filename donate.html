@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate - Wagayway Equality</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="css/donate.css"/>
+  <link rel="icon" type="image/x-icon" href="assets/logos/WElogo.png">
+  <style>
+.banner-container { padding: 20px; display: flex; justify-content: center; align-items: center; max-width: 800px; width: 100%; margin: 0 auto; }
+.donation-banner { position: relative; width: 100%; height: 300px; background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%), linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; margin-bottom: 1rem; }
+.floating-hearts { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+.heart { position: absolute; color: rgba(255,255,255,0.4); font-size: 20px; animation: float 6s infinite linear; }
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 80%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 90%; animation-delay: 3s; }
+@keyframes float { 0% { transform: translateY(100%) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100%) rotate(360deg); opacity: 0; } }
+.pulse-ring { position: absolute; top: 50%; left: 50%; width: 100px; height: 100px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; transform: translate(-50%, -50%); animation: pulse 2s infinite ease-out; }
+@keyframes pulse { 0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(2); opacity: 0; } }
+@media (max-width: 768px) { .donation-banner { height: 250px; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="assets/logos/WE.png" alt="Logo"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="whoweare.html">WHO WE ARE</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">WHAT WE DO</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="whatwedo.html#sogie">SOGIE</a></li>
+            <li><a class="dropdown-item" href="whatwedo.html#health">Health</a></li>
+            <li><a class="dropdown-item" href="whatwedo.html#rights">Rights</a></li>
+            <li><a class="dropdown-item" href="whatwedo.html#socio-economic">Socio Economic</a></li>
+            <li><a class="dropdown-item" href="whatwedo.html#trainings">Trainings &amp; Development</a></li>
+            <li><a class="dropdown-item" href="whatwedo.html#support">Support Groups</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="ourstories.html">OUR STORIES</a></li>
+        <li class="nav-item"><a class="nav-link" href="joinus.html">JOIN US</a></li>
+        <li class="nav-item"><a class="btn donate-btn" href="donate.html">DONATE NOW</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="donate-container">
+    <div class="donate-header-section">
+        <div class="donate-header-content">
+            <h1 class="donate-main-title">Support Our Mission</h1>
+            <div class="banner-container">
+                <a class="donation-banner" target="_blank" href="https://gogetfunding.com/invest-in-equality-fund-wagayways-advocacy/">
+                    <div class="floating-hearts">
+                        <div class="heart">&#9829;</div>
+                        <div class="heart">&#9829;</div>
+                        <div class="heart">&#9829;</div>
+                        <div class="heart">&#9829;</div>
+                    </div>
+                    <div class="pulse-ring"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="donate-main-content">
+        <div class="donate-info-grid">
+            <div class="donate-info-card">
+                <div class="donate-info-header">
+                    <h2 class="donate-info-title">Ready to Make a Difference?</h2>
+                </div>
+                <div class="donate-info-description">
+                    <p>We appreciate your willingness to support our cause. To make a donation and learn more about how your contribution will make an impact, please reach out to us directly.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-details">
+                                <h3>Email Us</h3>
+                                <a href="mailto:wagaywayequalityofficial@gmail.com" class="contact-link">wagaywayequalityofficial@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-details">
+                                <h3>Visit Our Office</h3>
+                                <p class="address">ESPASYO Community Center, 3/F Golden Core Ville Bldg., Nueva Villa Subd. (near GSIS), Brgy. Alangilan, Batangas City</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="donate-info-card">
+                <div class="donate-info-header">
+                    <h2 class="donate-info-title">Your Impact Matters</h2>
+                </div>
+                <div class="donate-info-description">
+                    <p>Since 2007, Wagayway Equality has been a beacon of hope and support for the LGBTQIA+ community. Your donations help us:</p>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-check-circle"></i> Provide free HIV screening and health services</li>
+                        <li><i class="fas fa-check-circle"></i> Conduct SOGIE seminars and rights education</li>
+                        <li><i class="fas fa-check-circle"></i> Offer socio-economic empowerment programs</li>
+                        <li><i class="fas fa-check-circle"></i> Create safe spaces through support groups</li>
+                        <li><i class="fas fa-check-circle"></i> Develop skills through training programs</li>
+                        <li><i class="fas fa-check-circle"></i> Advocate for equality and inclusion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>WAGAYWAY EQUALITY</h3>
+      <h4>Community of Volunteers</h4>
+    </div>
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="mailto:wagaywayequalityofficial@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.facebook.com/wagaywayequality" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/wagaywayequality/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@wagaywayequality" aria-label="Tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/WagaywayBTG" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/@wagaywayequalityinc." aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
